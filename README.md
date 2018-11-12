@@ -94,4 +94,4 @@ The **_TF-IDF_** value for a given word in a given document is just found by mul
 
 ## Summary
 
-In this lesson, you learned about some foundational concepts in Natural Language Processing such as stemming and lemmatization, as well as various strategies for converting text data into word vectors!
+In this lesson, you learned about some foundational concepts in Natural Language Processing such as stemming and lemmatization, as well as various strategies for converting text data into word vectors.
