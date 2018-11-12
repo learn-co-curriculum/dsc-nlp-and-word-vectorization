@@ -10,7 +10,7 @@ In this lesson, we'll learn about some foundational concepts in Natural Language
 You will be able to:
 
 * Understand and explain Stemming and its importance in Natural Language Processing
-* Understand and explain Lemmatization and its importannce in Natural Language Processing
+* Understand and explain Lemmatization and its importance in Natural Language Processing
 * Understand and explain the rationale and methodology behind text vectorization strategies such as Count Vectorization and TF-IDF, and their applications in Natural Language Processing
 
 ## What is Natural Language Processing?
