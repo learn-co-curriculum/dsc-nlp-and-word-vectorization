@@ -19,7 +19,7 @@ You will be able to:
 
 ## NLP and Bayesian Statistics
 
-As machine learning has come into it's own, we've seen NLP products get better and better.  For instance, in just a few decades, we've gone from rule-based chat bots with preprogrammed responses to things like Siri and [Google Duplex](https://www.youtube.com/watch?v=bd1mEm2Fy08) (if you aren't familiar with Duplex, take a few minutes to follow that link and watch the demo on YouTube--you won't be disappointed!). Much of the most exciting advancements currently happening in the field of NLP are due to Deep Learning--we'll learn more about these approaches in Module 4.  However, we can still do amazing things with machine learning and text data by making use of Bayesian methods. For instance, you may remember a time in the early 2000s when the problem of email spam was bad, and getting worse.  This problem was eventually solved through the application of machine learning--specifically, **_Naive Bayesian Classification_**!  For the remainder of this section, we'll focus on how we can apply our newfound knowledge of Bayesian methods to solve real-world NLP tasks such as [spam filtering](http://www.paulgraham.com/spam.html) and text classification. 
+As machine learning has come into its own, we've seen NLP products get better and better.  For instance, in just a few decades, we've gone from rule-based chat bots with preprogrammed responses to things like Siri and [Google Duplex](https://www.youtube.com/watch?v=bd1mEm2Fy08) (if you aren't familiar with Duplex, take a few minutes to follow that link and watch the demo on YouTube--you won't be disappointed!). Much of the most exciting advancements currently happening in the field of NLP are due to Deep Learning--we'll learn more about these approaches in Module 4.  However, we can still do amazing things with machine learning and text data by making use of Bayesian methods. For instance, you may remember a time in the early 2000s when the problem of email spam was bad, and getting worse.  This problem was eventually solved through the application of machine learning--specifically, **_Naive Bayesian Classification_**!  For the remainder of this section, we'll focus on how we can apply our newfound knowledge of Bayesian methods to solve real-world NLP tasks such as [spam filtering](http://www.paulgraham.com/spam.html) and text classification. 
 
 ## Working With Text Data
 
@@ -48,13 +48,13 @@ However, there are still other important decisions to make during the Tokenizati
 
 ### Stemming, Lemmatization, and Stop Words
 
-Sometimes, depending on the task, it may be best to leave "run" and "runs" as different tokens.  However, this often is not the case--especially with smaller datasets.  NLP methods such as **_Stemming_** and **_Lemmatization_** help us deal with problem, where we reduce each word token down to its root word.  For cases such as "run", "runs", "running" and "ran", they are more similar than different--we may want our algorithm to treat these as the same word, "run".  
+Sometimes, depending on the task, it may be best to leave "run" and "runs" as different tokens.  However, this often is not the case--especially with smaller datasets.  NLP methods such as **_Stemming_** and **_Lemmatization_** help us deal with this problem, where we reduce each word token down to its root word.  For cases such as "run", "runs", "running" and "ran", they are more similar than different--we may want our algorithm to treat these as the same word, "run".  
 
 **_Stemming_** accomplishes this by removing the ends of words where the end signals some sort of derivational change to the word. For instance, we know that adding an 's' to the end of a word makes it plural--a stemming algorithm given the word "cats" would return "cat".  Note that stems do not have to make sense as actual English words. For example, "ponies" would be reduced to "poni", not "pony". Stemming is a more crude, heuristic process that contains rule sets that tells the algorithm how to stem each word, and what it should be stemmed to. The process is more crude than lemmatization, but it's also easier to implement. For instance, take a look at this example subset of stemming rules from the [Stanford NLP Group](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html):
 
 <img src='stemming.png'>
 
-**_Lemmatization_** accomplishes pretty much the same thing as stemming, but does it in a more complex way, by examining the **_morphology_** of words and attempting to reduce each word to it's most basic form, or **_lemma_**.  Note that the results here often end up a bit different than stemming.  See the following table for an example of the differences in results:
+**_Lemmatization_** accomplishes pretty much the same thing as stemming, but does it in a more complex way, by examining the **_morphology_** of words and attempting to reduce each word to its most basic form, or **_lemma_**.  Note that the results here often end up a bit different than stemming.  See the following table for an example of the differences in results:
 
 |   Word   |  Stem | Lemma |
 |:--------:|:-----:|:-----:|
@@ -69,7 +69,7 @@ Once we cleaned and tokenized our text data, we can convert it to vectors. Howev
 
 ### Count Vectorization
 
-One of the most basic, but useful ways of vectorizing text data is to simply count the number of times each word appears in the corpus.  If working with a single document, we just create a single vector, where each element in the vector corresponds to the count of a unique word in the document. If working with multiple documents, we would store everything in a DataFrame, with each column representing a unique word, while each row represents the the count vector for a given document. 
+One of the most basic, but useful ways of vectorizing text data is to simply count the number of times each word appears in the corpus.  If working with a single document, we just create a single vector, where each element in the vector corresponds to the count of a unique word in the document. If working with multiple documents, we would store everything in a DataFrame, with each column representing a unique word, while each row represents the count vector for a given document. 
 
 | Document | Aardvark | Apple | ... | Zebra |
 |:--------:|:--------:|:-----:|-----|-------|
