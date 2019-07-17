@@ -52,7 +52,7 @@ Sometimes, depending on the task, it may be best to leave "run" and "runs" as di
 
 **_Stemming_** accomplishes this by removing the ends of words where the end signals some sort of derivational change to the word. For instance, we know that adding an 's' to the end of a word makes it plural--a stemming algorithm given the word "cats" would return "cat".  Note that stems do not have to make sense as actual English words. For example, "ponies" would be reduced to "poni", not "pony". Stemming is a more crude, heuristic process that contains rule sets that tells the algorithm how to stem each word, and what it should be stemmed to. The process is more crude than lemmatization, but it's also easier to implement. For instance, take a look at this example subset of stemming rules from the [Stanford NLP Group](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html):
 
-<img src='stemming.png'>
+<img src='images/new_stemming.png' width="400">
 
 **_Lemmatization_** accomplishes pretty much the same thing as stemming, but does it in a more complex way, by examining the **_morphology_** of words and attempting to reduce each word to its most basic form, or **_lemma_**.  Note that the results here often end up a bit different than stemming.  See the following table for an example of the differences in results:
 
@@ -95,3 +95,8 @@ The **_TF-IDF_** value for a given word in a given document is just found by mul
 ## Summary
 
 In this lesson, you learned about some foundational concepts in Natural Language Processing such as stemming and lemmatization, as well as various strategies for converting text data into word vectors.
+
+
+```python
+
+```
