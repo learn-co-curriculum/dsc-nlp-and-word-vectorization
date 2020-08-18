@@ -86,11 +86,11 @@ TF-IDF stands for **_Term Frequency-Inverse Document Frequency_**. It is a combi
 
 **_Term Frequency_** is calculated with the following formula:
 
-$$\large Term\ Frequency(t) = \frac{number\ of\ times\ t\ appears\ in\ a\ document} {total\ number\ of\ terms\ in\ the\ document} $$ 
+ <img src="https://render.githubusercontent.com/render/math?math=\large Term\ Frequency(t) = \frac{number\ of\ times\ t\ appears\ in\ a\ document} {total\ number\ of\ terms\ in\ the\ document} "> 
 
 **_Inverse Document Frequency_** is calculated with the following formula:
 
-$$\large IDF(t) = log_e(\frac{Total\ Number\ of\ Documents}{Number\ of\ Documents\ with\ t\ in\ it})$$
+ <img src="https://render.githubusercontent.com/render/math?math=\large IDF(t) = log_e(\frac{Total\ Number\ of\ Documents}{Number\ of\ Documents\ with\ t\ in\ it})"> 
 
 The **_TF-IDF_** value for a given word in a given document is just found by multiplying the two!
 
