@@ -54,7 +54,7 @@ Sometimes, depending on the task, it may be best to leave "run" and "runs" as di
 
 **_Stemming_** accomplishes this by removing the ends of words where the end signals some sort of derivational change to the word. For instance, we know that adding an 's' to the end of a word makes it plural -- a stemming algorithm given the word "cats" would return "cat".  Note that stems do not have to make sense as actual English words. For example, "ponies" would be reduced to "poni", not "pony". Stemming is a more crude, heuristic process that contains rule sets that tells the algorithm how to stem each word, and what it should be stemmed to. The process is more crude than lemmatization, but it's also easier to implement. For instance, take a look at this example subset of stemming rules from the [Stanford NLP Group](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html):
 
-<img src='images/new_stemming.png' width="400">
+<img src="images/new_stemming.png" width="400">
 
 **_Lemmatization_** accomplishes pretty much the same thing as stemming, but does it in a more complex way, by examining the **_morphology_** of words and attempting to reduce each word to its most basic form, or **_lemma_**.  Note that the results here often end up a bit different than stemming.  See the following table for an example of the differences in results:
 
@@ -86,11 +86,11 @@ TF-IDF stands for **_Term Frequency-Inverse Document Frequency_**. It is a combi
 
 **_Term Frequency_** is calculated with the following formula:
 
- <img src="https://render.githubusercontent.com/render/math?math=\large Term\ Frequency(t) = \frac{number\ of\ times\ t\ appears\ in\ a\ document} {total\ number\ of\ terms\ in\ the\ document} "> 
+<img src="https://render.githubusercontent.com/render/math?math=\large \text{Term Frequency}(t) = \frac{\text{number of times t appears in a document}}{\text{total number of terms in the document}}"> 
 
 **_Inverse Document Frequency_** is calculated with the following formula:
 
- <img src="https://render.githubusercontent.com/render/math?math=\large IDF(t) = log_e(\frac{Total\ Number\ of\ Documents}{Number\ of\ Documents\ with\ t\ in\ it})"> 
+<img src="https://render.githubusercontent.com/render/math?math=\large \text{IDF}(t) = log_e(\frac{\text{Total Number of Documents}}{\text{Number of Documents with t in it}})"> 
 
 The **_TF-IDF_** value for a given word in a given document is just found by multiplying the two!
 
